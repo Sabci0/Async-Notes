@@ -16,10 +16,30 @@
             transition: all 2s;
         }
     </style>
-    <script src="./src/js/app.js" async defer type="module"></script>
+    <script src="./src/js/currencyCalculator.js" async defer type="module"></script>
+<!--    <script src="./src/js/app.js" async defer type="module"></script>-->
+<!--    <script src="./src/js/asyncaway.js" async defer type="module"></script>-->
     <title>Document</title>
 </head>
 <body>
-<div class="square"></div>
+<!--<div class="square"></div>-->
+
+<form>
+    <label for="currencyInput">Currency</label>
+    <select id="currencyInput">
+        <option value="0">---</option>
+    </select>
+    <label for="currencyQuantity"> Quantity</label>
+    <input id="currencyQuantity" type="number" min="0">
+
+    <label for="currencyOutput">Output Currency</label>
+    <select id="currencyOutput">
+        <option value="0">---</option>
+    </select>
+
+</form>
+
+<div id="result"></div>
+
 </body>
 </html>
