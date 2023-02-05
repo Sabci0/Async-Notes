@@ -37,7 +37,7 @@ async function getCurrencyValue(curCode) {
     try {
         const response = await fetch(`http://api.nbp.pl/api/exchangerates/rates/a/${curCode}/`);
         const data = await response.json();
-        return data.rates[0].mid;
+        return data?.rates[0]?.mid;
     } catch {
         console.log('something is no yes');
     }

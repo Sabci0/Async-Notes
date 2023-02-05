@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .weather_form{
+            width: 100%;
+            max-width: 500px;
+            margin-inline: auto;
+
+            border:1px solid black;
+
+        }
+        .weather_form:focus{
+            border:1px solid red;
+        }
+
+        .search_button{
+            margin-top: 0.5rem;
+            border-radius: 0.25rem;
+            padding: 0.5rem;
+            background-color: green;
+            display: block;
+
+            margin-left: auto;
+            margin-right: 0;
+            width: 100%;
+            cursor: pointer;
+        }
+        .inside_weather{
+            display: flex;
+            justify-content: space-around;
+        }
+        .inside_weather > *{
+
+        }
+    </style>
+    <script src="src/weather_src/js/weather.js" async defer></script>
+    <title>Weather</title>
+</head>
+<body>
+
+<div class="wrapper">
+<form action="" class="weather_form" tabindex="0" id="weatherForm">
+    <div class="inside_weather">
+    <label for="city">Enter City</label>
+        <input type="text" id="city">
+        <span>or</span>
+
+    <button id="cityButton" type="button" >Show city for my location</button>
+    </div>
+
+
+    <button id="findMe" type="submit" class="search_button">Get weather</button>
+</form>
+
+<p id="status"></p>
+<a id="mapLink" target="_blank"></a>
+</div>
+</body>
+</html>
